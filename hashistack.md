@@ -10,8 +10,11 @@ gcloud sql instances create hashiapp \
 ```
 
 ```
-gcloud sql instances set-root-password hashiapp \
-  --password <password>
+gcloud sql users set-password root \
+--host=% \
+--instance=hashiapp \
+--prompt-for-password
+Instance Password: <password>
 ```
 
 ```
